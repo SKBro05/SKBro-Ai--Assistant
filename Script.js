@@ -5,6 +5,14 @@ function sendMessage() {
 
   if (userText === "") return;
 
+  chatBox.innerHTML += `<p><strong>You:</strong> ${userText}</p>`;
+  chatBox.innerHTML += `<p><strong>SKBro:</strong> Hello! You said: ${userText}</p>`;
+
+  input.value = "";
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+
   // Show user message
   chatBox.innerHTML += `<p><strong>You:</strong> ${userText}</p>`;
 
@@ -100,4 +108,5 @@ function getBotResponse(input) {
   // Default
   return "Muze Patana tere Bas ki Bat nahi hau, Aaage Ja Chuta nahi he.";
 }
+
   
